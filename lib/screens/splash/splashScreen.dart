@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/authScreens/loginScreen.dart';
 import 'package:instagram_clone/widgets/uiHelper.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -10,18 +12,26 @@ class Splashscreen extends StatefulWidget {
 
 class _SplashscreenState extends State<Splashscreen> {
   @override
+  void initState() {
+    super.initState();
+
+    Timer(Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Loginscreen()),
+      );
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        color: Colors.black,
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Uihelper.customImage(image: "logo.png"),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Uihelper.customImage(image: "Instagram Logo.png"),
           ],
         ),
