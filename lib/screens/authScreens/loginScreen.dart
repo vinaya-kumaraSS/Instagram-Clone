@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/authScreens/signupScreen.dart';
 import 'package:instagram_clone/widgets/uiHelper.dart';
 
 class Loginscreen extends StatelessWidget {
@@ -59,7 +60,7 @@ class Loginscreen extends StatelessWidget {
               fontWeight: FontWeight.w600,
               textColor: Color(0XFFFFFFFF),
               onPressed: () {
-                print("Log in button pressed");
+                print("Login button pressed");
               },
             ),
             SizedBox(height: 20),
@@ -127,7 +128,10 @@ class Loginscreen extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   fontColor: Color(0XFF3797EF),
                   onTap: () {
-                    print("Sign up tapped");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Signupscreen()),
+                    );
                   },
                 ),
               ],

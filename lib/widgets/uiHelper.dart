@@ -78,7 +78,7 @@ class Uihelper {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       ),
       onPressed: () {
-        print("Login button pressed");
+        onPressed();
       },
       child: Text(
         btnText,
@@ -89,6 +89,50 @@ class Uihelper {
           fontFamily: 'regular',
         ),
       ),
+    );
+  }
+
+  static customButtonWithIcon({
+    required IconData leadingIcon,
+    required Color iconColor,
+    required double btnWidth,
+    required double btnHeight,
+    required String btnText,
+    required Color btnColor,
+    required Color textColor,
+    required double fontSize,
+    required FontWeight fontWeight,
+    required double btnRadius,
+    required String btnTextFamily,
+    required VoidCallback onPressed,
+  }) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: btnColor,
+        fixedSize: Size(btnWidth, btnHeight),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(btnRadius)),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(leadingIcon, color: iconColor),
+          SizedBox(width: 5),
+          Text(
+            "Log in with Facebook",
+            style: TextStyle(
+              color: textColor,
+              fontSize: fontSize,
+              fontWeight: fontWeight,
+              fontFamily: btnTextFamily,
+            ),
+          ),
+        ],
+      ),
+      onPressed: () {
+        onPressed();
+      },
     );
   }
 }
