@@ -20,6 +20,7 @@ class Uihelper {
       child: TextField(
         controller: controller,
         obscureText: isPassword,
+        cursorColor: Color(0xFFFFFFFF),
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: TextStyle(

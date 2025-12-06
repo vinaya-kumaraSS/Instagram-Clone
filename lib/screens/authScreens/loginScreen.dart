@@ -63,7 +63,75 @@ class Loginscreen extends StatelessWidget {
               },
             ),
             SizedBox(height: 20),
-            Row(children: [Icon(Icons.facebook_outlined, color: Colors.amber)]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.facebook_outlined, color: Color(0XFF3797EF)),
+                SizedBox(width: 5),
+                Uihelper.hyperLinkText(
+                  text: "Log in with Facebook",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  fontColor: Color(0XFF3797EF),
+                  onTap: () {
+                    print("facebook button clicked");
+                  },
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 1,
+                    width: 132,
+                    color: Color.fromARGB(15, 255, 255, 255),
+                  ),
+                  Text(
+                    "OR",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0XFFFFFFFF),
+                      fontFamily: 'regular',
+                    ),
+                  ),
+                  Container(
+                    height: 1,
+                    width: 132,
+                    color: Color.fromARGB(15, 255, 255, 255),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account?",
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w400,
+                    color: Color.fromARGB(149, 255, 255, 255),
+                    fontFamily: 'regular',
+                  ),
+                ),
+                SizedBox(width: 5),
+                Uihelper.hyperLinkText(
+                  text: "Sign up.",
+                  fontSize: 17,
+                  fontWeight: FontWeight.w400,
+                  fontColor: Color(0XFF3797EF),
+                  onTap: () {
+                    print("Sign up tapped");
+                  },
+                ),
+              ],
+            ),
           ],
         ),
       ),
