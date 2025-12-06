@@ -30,9 +30,13 @@ class _SplashscreenState extends State<Splashscreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Uihelper.customImage(image: "logo.png"),
+            Uihelper.customImage(image: "logo.png", height: 100, width: 100),
             SizedBox(height: 10),
-            Uihelper.customImage(image: "Instagram Logo.png"),
+            Uihelper.customImage(
+              image: "Instagram Logo.png",
+              height: 50,
+              width: 180,
+            ),
           ],
         ),
       ),
