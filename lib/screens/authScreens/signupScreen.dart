@@ -198,7 +198,7 @@ class Signupscreen extends StatelessWidget {
                 textColor: Color(0XFFFFFFFF),
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
-                onPressed: () {
+                onTap: () {
                   print("signup button pressed");
                 },
               ),

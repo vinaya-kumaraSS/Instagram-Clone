@@ -62,7 +62,7 @@ class Uihelper {
   }
 
   static customButton({
-    required VoidCallback onPressed,
+    required VoidCallback onTap,
     required Color btnColor,
     required String btnText,
     required double btnWidth,
@@ -78,7 +78,7 @@ class Uihelper {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       ),
       onPressed: () {
-        onPressed();
+        onTap();
       },
       child: Text(
         btnText,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/authScreens/forGotPasswordScreen.dart';
 import 'package:instagram_clone/screens/authScreens/signupScreen.dart';
 import 'package:instagram_clone/widgets/uiHelper.dart';
 
@@ -44,7 +45,12 @@ class Loginscreen extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     fontColor: Color(0XFF3797EF),
                     onTap: () {
-                      print("Forgot password tapped");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Forgotpasswordscreen(),
+                        ),
+                      );
                     },
                   ),
                 ],
@@ -59,7 +65,7 @@ class Loginscreen extends StatelessWidget {
               fontSize: 14,
               fontWeight: FontWeight.w600,
               textColor: Color(0XFFFFFFFF),
-              onPressed: () {
+              onTap: () {
                 print("Login button pressed");
               },
             ),
