@@ -105,13 +105,18 @@ class Uihelper {
     required double btnRadius,
     required String btnTextFamily,
     required VoidCallback onPressed,
+    Color? borderColor,
   }) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: btnColor,
         fixedSize: Size(btnWidth, btnHeight),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(btnRadius)),
+          side: borderColor != null
+              ? BorderSide(color: borderColor)
+              : BorderSide(color: btnColor),
+          borderRadius: BorderRadius.all(Radius.circular(btnRadius)
+          ),
         ),
       ),
       child: Row(
