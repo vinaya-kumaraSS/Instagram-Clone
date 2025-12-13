@@ -18,7 +18,7 @@ class Forgotpasswordscreen extends StatelessWidget {
             SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 2),
-              child: Text("Enter your email or username."),
+              child: Text("Enter your email or username"),
             ),
           ],
         ),
